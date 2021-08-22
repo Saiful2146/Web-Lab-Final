@@ -1,0 +1,29 @@
+<?php
+function Palindrome($string) {
+  $l = 0;
+  $r = strlen($string) - 1;
+  $flag = 0;
+
+  while($r > $l){
+    if ($string[$l] != $string[$r]){
+      $flag = 1;
+      break;
+    }
+    $l++;
+    $r--;
+  }
+
+  if ($flag == 0){
+    echo $string." is a Palindrome string.\n";
+  } else {
+    echo $string." is not a Palindrome string.\n";
+  }
+}
+
+Palindrome("radar");
+Palindrome("rubber");
+Palindrome("101");
+Palindrome("10002");
+
+
+?>
